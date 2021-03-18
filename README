@@ -1,0 +1,14 @@
+dash: "deadass" shell
+=========================================
+
+Gerardo Torres (github.com/gtr)
+
+Instructions for running:
+=========================================
+
+compile:
+     $ make
+run:
+     $ ./dash
+clean:
+     $ make clean
