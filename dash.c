@@ -10,7 +10,7 @@
  * compile:
  *      $ make
  * run:
- *      $ ./shell
+ *      $ ./dash
  * clean:
  *      $ make clean
  */
