@@ -129,20 +129,33 @@ void execute(char** command) {
  */
 void evaluateCommand(char** command, int length) {
     // Check if command is exit; if so, exit.
-    if (strcmp(command[0], "exit") == 0)
+    if (strcmp(command[0], "exit") == 0) {
         exit(0);
+    }
     
     // Check if command is cd; if so, change directory.
     if (strcmp(command[0], "cd") == 0) {
         char* dir = getenv("HOME");
-        if (length > 1)
+        if (length > 1) {
             dir = command[1];
+        }    
         if (chdir(dir) != 0) {
             printf("evaluateCommand: cd failed\n");
             exit(1);
         }
-        return;
     }
+
+    // Check if command is cd; if so, change directory.
+    if (strcmp(command[0], "help") == 0) {	   
+	    puts("\ndash: \"deadass\" shell"
+            "\nGerardo Torres (github.com/gtr)"
+    	    "\n"
+    	    "\nList of Commands supported:"
+  	        "\n>help - prints this message"
+            "\n>cd - changes directory"  
+            "\n>exit - exits dash"); 
+    }
+
 
     // If we reached this point, the command is not built-in, delegate to 
     // child process.
