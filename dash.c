@@ -148,7 +148,7 @@ void evaluateCommand(char** command, int length) {
     // Check if command is cd; if so, change directory.
     if (strcmp(command[0], "help") == 0) {	   
 	    puts("\ndash: \"deadass\" shell"
-            "\nGerardo Torres (github.com/gtr)y"
+            "\nGerardo Torres (github.com/gtr)"
     	    "\n"
     	    "\nList of Commands supported:"
   	        "\n>help - prints this message"
